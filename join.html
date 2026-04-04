@@ -29,11 +29,12 @@
     }
     .icon {
       width: 64px; height: 64px;
-      background: var(--teal);
-      border-radius: 18px;
+      border-radius: 14px;
+      overflow: hidden;
       display: flex; align-items: center; justify-content: center;
       margin: 0 auto 24px;
     }
+    .icon svg { width: 100%; height: 100%; }
     h1 { font-size: 24px; font-weight: 800; margin-bottom: 8px; }
     .code { font-size: 28px; font-weight: 800; letter-spacing: 4px; color: var(--teal); margin: 16px 0; }
     p { color: var(--gray); font-size: 15px; line-height: 1.6; margin-bottom: 24px; }
@@ -56,7 +57,7 @@
 <body>
   <div class="card">
     <div class="icon">
-      <svg width="32" height="32" viewBox="0 0 28 28" fill="none"><rect x="3" y="2" width="22" height="24" rx="3" stroke="white" stroke-width="2"/><path d="M3 8h22" stroke="white" stroke-width="2"/><path d="M9 14h10M9 18h7" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+      <svg width="32" height="32" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg"><rect width="72" height="72" fill="#0D2B2E"/><path d="M0,0 L36,0 L26,24 L36,48 L26,72 L0,72Z" fill="#1ABC9C"/><polyline points="36,0 26,24 36,48 26,72" fill="none" stroke="#E8FFFA" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/></svg>
     </div>
     <h1>You're Invited!</h1>
     <p>Someone invited you to join a trip on SplitMate.</p>

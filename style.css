@@ -541,11 +541,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .feature-card p {
   font-size: 14px;
-  color: var(--gray);
   line-height: 1.6;
 }
-.feature-card.feature-highlight p {
-  color: #FFFFFF;
+.feature-card:not(.feature-highlight) p {
+  color: var(--gray);
 }
 .feature-tags {
   display: flex;

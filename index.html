@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>SplitMate — Split Expenses With Friends | Group Trip Expense Tracker</title>
+  <meta name="description" content="SplitMate makes splitting trip expenses effortless. Track group spending, scan receipts with AI, settle debts instantly, and never let money ruin friendships. Free for iOS & Android.">
+  <meta name="keywords" content="expense splitter, split bills, group expenses, trip expense tracker, travel expense app, split costs, settle debts, receipt scanner, group travel app, splitmate">
+  <meta name="author" content="SplitMate">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://splitmate.live">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://splitmate.live">
+  <meta property="og:title" content="SplitMate — Split Trips, Not Friendships">
+  <meta property="og:description" content="The simplest way to split expenses with friends. Track spending, scan receipts, settle debts — all in one beautiful app.">
+  <meta property="og:image" content="https://splitmate.live/og-image.png">
+  <meta property="og:site_name" content="SplitMate">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://splitmate.live">
+  <meta name="twitter:title" content="SplitMate — Split Trips, Not Friendships">
+  <meta name="twitter:description" content="The simplest way to split expenses with friends. Track spending, scan receipts, settle debts — all in one beautiful app.">
+  <meta name="twitter:image" content="https://splitmate.live/og-image.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "SplitMate",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "FinanceApplication",
+    "description": "Split trip expenses effortlessly with friends. Track group spending, scan receipts with AI, and settle debts instantly.",
+    "url": "https://splitmate.live",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "120"
+    }
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="#" class="logo" aria-label="SplitMate Home">
+        <div class="logo-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="2" width="22" height="24" rx="3" stroke="currentColor" stroke-width="2"/>
+            <path d="M3 8h22" stroke="currentColor" stroke-width="2"/>
+            <path d="M9 14h10M9 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="logo-text">SplitMate</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a href="#download" class="btn btn-sm btn-primary nav-cta">Download Free</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <header class="hero" id="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">Free for iOS & Android</div>
+        <h1>Split Trips,<br>Not Friendships.</h1>
+        <p class="hero-sub">Track group expenses, scan receipts with AI, and settle debts in seconds. The only expense splitter you'll ever need.</p>
+        <div class="hero-actions">
+          <a href="#download" class="btn btn-primary btn-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Free
+          </a>
+          <a href="#how-it-works" class="btn btn-ghost btn-lg">See How It Works</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>10K+</strong>
+            <span>Expenses Split</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>4.8</strong>
+            <span>App Rating</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>50+</strong>
+            <span>Currencies</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="phone-mockup">
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <div class="mock-app">
+                <div class="mock-header">
+                  <span class="mock-greeting">Good morning</span>
+                  <span class="mock-name">Alex</span>
+                </div>
+                <div class="mock-card mock-settlement">
+                  <div class="mock-card-label">Pending Settlements</div>
+                  <div class="mock-settle-row">
+                    <div class="mock-avatar" style="background:#7F77DD">S</div>
+                    <div class="mock-settle-info">
+                      <span class="mock-settle-name">Sarah</span>
+                      <span class="mock-settle-amount negative">You owe $42.50</span>
+                    </div>
+                    <button class="mock-settle-btn">Settle</button>
+                  </div>
+                </div>
+                <div class="mock-section-title">Your Trips</div>
+                <div class="mock-card mock-trip">
+                  <div class="mock-trip-row">
+                    <div class="mock-trip-emoji">&#127956;</div>
+                    <div class="mock-trip-info">
+                      <span class="mock-trip-name">Bali Summer 2026</span>
+                      <span class="mock-trip-meta">4 members &middot; $1,240 total</span>
+                    </div>
+                  </div>
+                  <div class="mock-trip-bar">
+                    <div class="mock-trip-bar-fill" style="width:65%"></div>
+                  </div>
+                </div>
+                <div class="mock-card mock-trip">
+                  <div class="mock-trip-row">
+                    <div class="mock-trip-emoji">&#9968;</div>
+                    <div class="mock-trip-info">
+                      <span class="mock-trip-name">Weekend Ski Trip</span>
+                      <span class="mock-trip-meta">3 members &middot; $680 total</span>
+                    </div>
+                  </div>
+                  <div class="mock-trip-bar">
+                    <div class="mock-trip-bar-fill" style="width:40%"></div>
+                  </div>
+                </div>
+                <div class="mock-fab">+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-glow"></div>
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0 40C360 80 720 0 1080 40C1260 60 1380 50 1440 40V100H0V40Z" fill="var(--bg)"/>
+      </svg>
+    </div>
+  </header>
+
+  <!-- ========== SOCIAL PROOF BAR ========== -->
+  <section class="proof-bar">
+    <div class="container">
+      <p class="proof-text">Trusted by groups traveling across <strong>30+ countries</strong></p>
+    </div>
+  </section>
+
+  <!-- ========== PROBLEM ========== -->
+  <section class="section problem">
+    <div class="container problem-inner">
+      <div class="section-label">The Problem</div>
+      <h2>Splitting expenses shouldn't<br>split your group apart.</h2>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--danger)" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 15s1.5-2 4-2 4 2 4 2M9 9h.01M15 9h.01"/></svg>
+          </div>
+          <h3>"Who paid for what?"</h3>
+          <p>Losing track of expenses during trips leads to awkward conversations and broken trust.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--danger)" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 10h20"/><path d="M6 16h4"/></svg>
+          </div>
+          <h3>"I forgot my share"</h3>
+          <p>Mental math, lost receipts, and forgotten IOUs pile up — especially across currencies.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--danger)" stroke-width="1.5" stroke-linecap="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          </div>
+          <h3>"Settling up is chaos"</h3>
+          <p>Figuring out who owes who — and how much — turns into a spreadsheet nightmare.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURES ========== -->
+  <section class="section features" id="features">
+    <div class="container">
+      <div class="section-label">Features</div>
+      <h2>Everything you need.<br>Nothing you don't.</h2>
+      <p class="section-sub">SplitMate handles the complexity so you can focus on making memories.</p>
+
+      <div class="features-grid">
+        <div class="feature-card feature-highlight">
+          <div class="feature-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M2 9h20"/><path d="M10 15h4"/></svg>
+          </div>
+          <h3>Smart Expense Splitting</h3>
+          <p>Split equally, by exact amount, or by percentage. SplitMate calculates the minimum number of payments needed to settle everyone up.</p>
+          <div class="feature-tags">
+            <span class="tag">Equal</span>
+            <span class="tag">Exact</span>
+            <span class="tag">Percentage</span>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+          </div>
+          <h3>AI Receipt Scanner</h3>
+          <p>Snap a photo of any receipt. Our AI reads the amount, category, and description — no typing required.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3>Multi-Currency</h3>
+          <p>Traveling abroad? Each trip can have its own currency with automatic exchange rate conversion.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>Works Offline</h3>
+          <p>No signal on a mountain? No problem. Add expenses offline — everything syncs automatically when you're back online.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3>Instant Settlements</h3>
+          <p>See exactly who owes who. Record payments in one tap and keep a permanent audit trail.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          </div>
+          <h3>Spending Analytics</h3>
+          <p>Visualize spending by category, member, or timeline. Know exactly where the money went with beautiful charts.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Easy Invites</h3>
+          <p>Share a link, scan a QR code, or enter a code. Getting your group onboard takes seconds, not minutes.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          </div>
+          <h3>Real-time Notifications</h3>
+          <p>Get notified when expenses are added, payments are recorded, or new members join your trip.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HOW IT WORKS ========== -->
+  <section class="section how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-label">How It Works</div>
+      <h2>Up and running in 60 seconds.</h2>
+      <p class="section-sub">Three steps. That's it. No accounts to create, no cards to link.</p>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-visual">
+            <div class="step-phone-mini">
+              <div class="step-screen">
+                <div class="spm-create">
+                  <div class="spm-input-label">Trip Name</div>
+                  <div class="spm-input">Bali Summer 2026</div>
+                  <div class="spm-input-label">Currency</div>
+                  <div class="spm-input">USD ($)</div>
+                  <div class="spm-btn-create">Create Trip</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3>Create a Trip</h3>
+          <p>Name your trip, pick a currency, and you're the host. It takes 5 seconds.</p>
+        </div>
+
+        <div class="step-connector">
+          <svg width="40" height="2" viewBox="0 0 40 2"><line x1="0" y1="1" x2="40" y2="1" stroke="var(--border)" stroke-width="2" stroke-dasharray="4 4"/></svg>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-visual">
+            <div class="step-phone-mini">
+              <div class="step-screen">
+                <div class="spm-invite">
+                  <div class="spm-qr">
+                    <svg width="80" height="80" viewBox="0 0 80 80"><rect x="5" y="5" width="20" height="20" rx="2" fill="var(--dark)" opacity="0.8"/><rect x="30" y="5" width="8" height="8" rx="1" fill="var(--dark)" opacity="0.6"/><rect x="55" y="5" width="20" height="20" rx="2" fill="var(--dark)" opacity="0.8"/><rect x="5" y="30" width="8" height="8" rx="1" fill="var(--dark)" opacity="0.4"/><rect x="18" y="30" width="8" height="8" rx="1" fill="var(--dark)" opacity="0.6"/><rect x="35" y="30" width="12" height="12" rx="1" fill="var(--teal)" opacity="0.8"/><rect x="55" y="30" width="8" height="8" rx="1" fill="var(--dark)" opacity="0.5"/><rect x="5" y="55" width="20" height="20" rx="2" fill="var(--dark)" opacity="0.8"/><rect x="30" y="55" width="8" height="8" rx="1" fill="var(--dark)" opacity="0.5"/><rect x="55" y="55" width="8" height="8" rx="1" fill="var(--dark)" opacity="0.6"/><rect x="68" y="55" width="8" height="8" rx="1" fill="var(--dark)" opacity="0.4"/></svg>
+                  </div>
+                  <div class="spm-code">BALI2026</div>
+                  <div class="spm-share-btn">Share Invite</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3>Invite Your Group</h3>
+          <p>Share a link, QR code, or invite code. Friends join instantly — no sign-up friction.</p>
+        </div>
+
+        <div class="step-connector">
+          <svg width="40" height="2" viewBox="0 0 40 2"><line x1="0" y1="1" x2="40" y2="1" stroke="var(--border)" stroke-width="2" stroke-dasharray="4 4"/></svg>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-visual">
+            <div class="step-phone-mini">
+              <div class="step-screen">
+                <div class="spm-balance">
+                  <div class="spm-balance-header">Balances</div>
+                  <div class="spm-balance-row">
+                    <div class="spm-avatar-sm" style="background:var(--teal)">A</div>
+                    <span>Alex</span>
+                    <span class="spm-owed">+$85.00</span>
+                  </div>
+                  <div class="spm-balance-row">
+                    <div class="spm-avatar-sm" style="background:var(--purple)">S</div>
+                    <span>Sarah</span>
+                    <span class="spm-owes">-$42.50</span>
+                  </div>
+                  <div class="spm-balance-row">
+                    <div class="spm-avatar-sm" style="background:var(--warning)">M</div>
+                    <span>Mike</span>
+                    <span class="spm-owes">-$42.50</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3>Split & Settle</h3>
+          <p>Add expenses as they happen. SplitMate shows who owes who and minimizes the number of payments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SHOWCASE (Split Types) ========== -->
+  <section class="section showcase">
+    <div class="container showcase-inner">
+      <div class="showcase-content">
+        <div class="section-label">Flexible Splitting</div>
+        <h2>Split it your way.</h2>
+        <p>Not every expense should be split evenly. SplitMate gives you three ways to divide costs — so everyone pays their fair share.</p>
+        <div class="split-types">
+          <div class="split-type">
+            <div class="split-icon equal">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 9h14M5 15h14"/></svg>
+            </div>
+            <div>
+              <strong>Equal Split</strong>
+              <span>Divide evenly among everyone</span>
+            </div>
+          </div>
+          <div class="split-type">
+            <div class="split-icon exact">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div>
+              <strong>Exact Amounts</strong>
+              <span>Set custom amounts per person</span>
+            </div>
+          </div>
+          <div class="split-type">
+            <div class="split-icon percent">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+            </div>
+            <div>
+              <strong>Percentage</strong>
+              <span>Distribute by custom percentages</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="showcase-visual">
+        <div class="split-demo">
+          <div class="split-demo-header">
+            <span>Dinner at Sakura</span>
+            <strong>$120.00</strong>
+          </div>
+          <div class="split-demo-type">Split equally</div>
+          <div class="split-demo-members">
+            <div class="split-member">
+              <div class="spm-avatar-sm" style="background:var(--teal)">A</div>
+              <span>Alex</span>
+              <strong>$30.00</strong>
+            </div>
+            <div class="split-member">
+              <div class="spm-avatar-sm" style="background:var(--purple)">S</div>
+              <span>Sarah</span>
+              <strong>$30.00</strong>
+            </div>
+            <div class="split-member">
+              <div class="spm-avatar-sm" style="background:var(--warning)">M</div>
+              <span>Mike</span>
+              <strong>$30.00</strong>
+            </div>
+            <div class="split-member">
+              <div class="spm-avatar-sm" style="background:var(--danger)">J</div>
+              <span>Jess</span>
+              <strong>$30.00</strong>
+            </div>
+          </div>
+          <div class="split-demo-check">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Splits add up perfectly
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-label">What People Say</div>
+      <h2>Loved by travelers worldwide.</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Used SplitMate for our Japan trip with 6 friends. Zero arguments about money. The receipt scanner alone is worth the download."</p>
+          <div class="testimonial-author">
+            <div class="spm-avatar-sm" style="background:var(--teal)">R</div>
+            <div>
+              <strong>Rahul K.</strong>
+              <span>Group trip to Japan</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"The offline mode saved us in the mountains. We added expenses all week with no service, and it synced everything when we got back."</p>
+          <div class="testimonial-author">
+            <div class="spm-avatar-sm" style="background:var(--purple)">E</div>
+            <div>
+              <strong>Emma L.</strong>
+              <span>Hiking trip, Colorado</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Finally an expense app that doesn't make you create accounts and link cards. Share a link, everyone's in. So simple."</p>
+          <div class="testimonial-author">
+            <div class="spm-avatar-sm" style="background:var(--warning)">D</div>
+            <div>
+              <strong>David M.</strong>
+              <span>Roommates &amp; weekend trips</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="section faq" id="faq">
+    <div class="container faq-inner">
+      <div class="section-label">FAQ</div>
+      <h2>Common questions.</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Is SplitMate free?</summary>
+          <p>Yes, completely free. No premium tiers, no ads, no hidden costs. All features are available to everyone.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Does everyone need to install the app?</summary>
+          <p>Only the person adding expenses needs the app. Others can join via a link and view balances. But the full experience comes with the app installed.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Does it work without internet?</summary>
+          <p>Absolutely. SplitMate is built offline-first. Add expenses, record payments, and view balances without any internet connection. Everything syncs automatically when you reconnect.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How does the AI receipt scanner work?</summary>
+          <p>Take a photo of any receipt. Our AI reads the total amount, suggests a category, and fills in the description — saving you from manual data entry.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I use different currencies?</summary>
+          <p>Yes. Each trip can have its own currency, and SplitMate handles exchange rate conversion automatically. Perfect for international travel.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is my data safe?</summary>
+          <p>Your data is stored securely with end-to-end encryption. We use industry-standard cloud infrastructure and never sell your data to third parties.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA / DOWNLOAD ========== -->
+  <section class="section cta" id="download">
+    <div class="container cta-inner">
+      <h2>Ready to split smarter?</h2>
+      <p>Download SplitMate free and never argue about money again.</p>
+      <div class="cta-buttons">
+        <a href="#" class="store-badge" aria-label="Download on the App Store">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          <div>
+            <small>Download on the</small>
+            <strong>App Store</strong>
+          </div>
+        </a>
+        <a href="#" class="store-badge" aria-label="Get it on Google Play">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.49c-.41-.2-.68-.6-.68-1.07V1.58c0-.47.27-.87.68-1.07L13.54 12 3.18 23.49zM16.83 15.29l-2.58-2.58L16.83 10.13l3.33 1.93c.59.34.59.94 0 1.28l-3.33 1.95zM14.25 12.71l-10.8 10.8 12.55-7.26-1.75-3.54zM3.45.49l10.8 10.8 1.75-3.54L3.45.49z"/></svg>
+          <div>
+            <small>Get it on</small>
+            <strong>Google Play</strong>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo" aria-label="SplitMate Home">
+          <div class="logo-icon">
+            <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="22" height="24" rx="3" stroke="currentColor" stroke-width="2"/><path d="M3 8h22" stroke="currentColor" stroke-width="2"/><path d="M9 14h10M9 18h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <span class="logo-text">SplitMate</span>
+        </a>
+        <p>Split expenses with friends, not friendships.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <strong>Product</strong>
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#download">Download</a>
+        </div>
+        <div class="footer-col">
+          <strong>Legal</strong>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-col">
+          <strong>Connect</strong>
+          <a href="#">Twitter</a>
+          <a href="#">Instagram</a>
+          <a href="mailto:hello@splitmate.live">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 SplitMate. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

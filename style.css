@@ -521,7 +521,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border: none;
   padding: 36px 32px;
 }
-.feature-highlight p { color: rgba(255,255,255,0.95); }
+.feature-highlight p { color: #FFFFFF; }
 .feature-highlight .feature-icon-wrap { background: rgba(255,255,255,0.15); color: white; }
 
 .feature-icon-wrap {

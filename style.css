@@ -142,11 +142,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .logo-icon {
   width: 36px;
   height: 36px;
-  border-radius: 8px;
+  border-radius: 0;
+  background: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow: visible;
 }
 .logo-icon svg {
   width: 100%;
@@ -969,7 +970,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   padding-bottom: 40px;
 }
 .footer .logo { margin-bottom: 12px; }
-.footer .logo-icon { border-radius: 8px; }
+.footer .logo-icon { border-radius: 0; background: none; }
 .footer .logo-text { color: var(--white); }
 .footer-brand p {
   font-size: 14px;

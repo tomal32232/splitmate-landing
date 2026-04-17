@@ -42,23 +42,15 @@
     "applicationCategory": "TravelApplication",
     "description": "All-in-one group trip companion: split expenses, plan flights and hotels, organize travel documents like passports and visas, and settle debts instantly.",
     "url": "https://splitmate.live",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "ratingCount": "120"
-    }
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "120" }
   }
   </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -79,11 +71,11 @@
       </a>
       <div class="nav-links" id="navLinks">
         <a href="#features">Features</a>
-        <a href="#how-it-works">How It Works</a>
+        <a href="#how">How it works</a>
         <a href="#testimonials">Reviews</a>
         <a href="#faq">FAQ</a>
       </div>
-      <a href="#download" class="btn btn-sm btn-primary nav-cta">Download Free</a>
+      <a href="#download" class="btn btn-sm btn-primary nav-cta">Get the app</a>
       <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
         <span></span><span></span><span></span>
       </button>
@@ -94,30 +86,25 @@
   <header class="hero" id="hero">
     <div class="container hero-inner">
       <div class="hero-content">
-        <div class="hero-badge">Free for iOS & Android</div>
-        <h1>Split Trips,<br>Not Friendships.</h1>
-        <p class="hero-sub">Split expenses, scan tickets into your itinerary, organize travel docs — all in one app built for group trips.</p>
+        <div class="eyebrow">Free · iOS &amp; Android</div>
+        <h1>The trip companion<br>that keeps the <em>group together.</em></h1>
+        <p class="hero-sub">Split expenses, scan tickets into your itinerary, and keep every travel doc organised. One app for the whole trip.</p>
         <div class="hero-actions">
-          <a href="#download" class="btn btn-primary btn-lg">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download Free
-          </a>
-          <a href="#how-it-works" class="btn btn-ghost btn-lg">See How It Works</a>
+          <a href="#download" class="btn btn-primary btn-lg">Download free</a>
+          <a href="#how" class="btn btn-ghost btn-lg">See how it works</a>
         </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <strong>10K+</strong>
-            <span>Expenses Split</span>
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            No sign-ups for invitees
           </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <strong>4.8</strong>
-            <span>App Rating</span>
+          <div class="hero-meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Works offline
           </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <strong>50+</strong>
-            <span>Currencies</span>
+          <div class="hero-meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            50+ currencies
           </div>
         </div>
       </div>
@@ -130,8 +117,8 @@
                   <span class="mock-greeting">Good morning</span>
                   <span class="mock-name">Alex</span>
                 </div>
-                <div class="mock-card mock-settlement">
-                  <div class="mock-card-label">Pending Settlements</div>
+                <div class="mock-card">
+                  <div class="mock-card-label">Pending settlements</div>
                   <div class="mock-settle-row">
                     <div class="mock-avatar" style="background:#7F77DD">S</div>
                     <div class="mock-settle-info">
@@ -141,25 +128,25 @@
                     <button class="mock-settle-btn">Settle</button>
                   </div>
                 </div>
-                <div class="mock-section-title">Your Trips</div>
-                <div class="mock-card mock-trip">
+                <div class="mock-section-title">Your trips</div>
+                <div class="mock-card">
                   <div class="mock-trip-row">
                     <div class="mock-trip-emoji">&#127956;</div>
                     <div class="mock-trip-info">
                       <span class="mock-trip-name">Bali Summer 2026</span>
-                      <span class="mock-trip-meta">4 members &middot; $1,240 total</span>
+                      <span class="mock-trip-meta">4 members &middot; $1,240</span>
                     </div>
                   </div>
                   <div class="mock-trip-bar">
                     <div class="mock-trip-bar-fill" style="width:65%"></div>
                   </div>
                 </div>
-                <div class="mock-card mock-trip">
+                <div class="mock-card">
                   <div class="mock-trip-row">
                     <div class="mock-trip-emoji">&#9968;</div>
                     <div class="mock-trip-info">
-                      <span class="mock-trip-name">Weekend Ski Trip</span>
-                      <span class="mock-trip-meta">3 members &middot; $680 total</span>
+                      <span class="mock-trip-name">Weekend ski trip</span>
+                      <span class="mock-trip-meta">3 members &middot; $680</span>
                     </div>
                   </div>
                   <div class="mock-trip-bar">
@@ -171,418 +158,290 @@
             </div>
           </div>
         </div>
-        <div class="hero-glow"></div>
       </div>
-    </div>
-    <div class="hero-wave">
-      <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="M0 40C360 80 720 0 1080 40C1260 60 1380 50 1440 40V100H0V40Z" fill="var(--bg)"/>
-      </svg>
     </div>
   </header>
 
-  <!-- ========== SOCIAL PROOF BAR ========== -->
-  <section class="proof-bar">
-    <div class="container">
-      <p class="proof-text">Trusted by groups traveling across <strong>30+ countries</strong></p>
-    </div>
-  </section>
-
   <!-- ========== PROBLEM ========== -->
-  <section class="section problem">
-    <div class="container problem-inner">
-      <div class="section-label">The Problem</div>
-      <h2>Splitting expenses shouldn't<br>split your group apart.</h2>
-      <div class="problem-grid">
-        <div class="problem-card">
-          <div class="problem-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--danger)" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 15s1.5-2 4-2 4 2 4 2M9 9h.01M15 9h.01"/></svg>
+  <section class="problem">
+    <div class="container">
+      <h2>Stop juggling notes, screenshots,<br>and <span class="strike">"who paid for what?"</span></h2>
+      <p>Group trips already have enough moving parts. SplitMate brings expenses, itineraries, and travel docs into one app — so the plan stays clear and the money stays fair.</p>
+    </div>
+  </section>
+
+  <!-- ========== FEATURES — BENTO ========== -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="features-head">
+        <div class="eyebrow">Features</div>
+        <h2>Built for every part of<br>a group trip.</h2>
+        <p class="section-sub">Everything you need to plan, pay, and remember together.</p>
+      </div>
+
+      <div class="bento">
+        <!-- Hero card -->
+        <div class="bento-cell bento-hero">
+          <div class="bento-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2l1.5 4.5L18 8l-4.5 1.5L12 14l-1.5-4.5L6 8l4.5-1.5z"/><path d="M19 14l.7 2.1L22 17l-2.3.9L19 20l-.7-2.1L16 17l2.3-.9z"/><path d="M5 16l.5 1.5L7 18l-1.5.5L5 20l-.5-1.5L3 18l1.5-.5z"/></svg>
           </div>
-          <h3>"Who paid for what?"</h3>
-          <p>Losing track of expenses during trips leads to awkward conversations and broken trust.</p>
+          <h3>One scan, anywhere it belongs.</h3>
+          <p>Snap a receipt, boarding pass, hotel confirmation, or passport. AI reads the details and files it where it should go — no typing, no folders to manage.</p>
+          <div class="bento-tags">
+            <span class="bento-tag">Receipts</span>
+            <span class="bento-tag">Tickets</span>
+            <span class="bento-tag">Hotels</span>
+            <span class="bento-tag">Passports</span>
+          </div>
         </div>
-        <div class="problem-card">
-          <div class="problem-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--danger)" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 10h20"/><path d="M6 16h4"/></svg>
+
+        <!-- Tall card -->
+        <div class="bento-cell bento-tall">
+          <div class="bento-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="18" rx="3"/><path d="M2 9h20"/><path d="M9 14h6"/></svg>
           </div>
-          <h3>"I forgot my share"</h3>
-          <p>Mental math, lost receipts, and forgotten IOUs pile up — especially across currencies.</p>
+          <h3>Smart expense splitting</h3>
+          <p>Equal, exact, or by percentage — across currencies. We calculate the minimum payments needed to settle everyone up.</p>
         </div>
-        <div class="problem-card">
-          <div class="problem-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--danger)" stroke-width="1.5" stroke-linecap="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+
+        <!-- Wide -->
+        <div class="bento-cell bento-wide">
+          <div class="bento-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
           </div>
-          <h3>"Settling up is chaos"</h3>
-          <p>Figuring out who owes who — and how much — turns into a spreadsheet nightmare.</p>
+          <h3>Itinerary that fills itself in</h3>
+          <p>Scan a boarding pass — we add the airline, gate, seat, and timezone. Reminders fire at the right local time at your destination.</p>
+        </div>
+
+        <!-- Narrow -->
+        <div class="bento-cell bento-narrow">
+          <div class="bento-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <h3>Travel document vault</h3>
+          <p>Passport, visa, insurance — organised into folders with expiry alerts.</p>
+        </div>
+
+        <!-- Three thirds -->
+        <div class="bento-cell bento-third">
+          <div class="bento-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3>Multi-currency</h3>
+          <p>Each trip in its own currency, with automatic conversion.</p>
+        </div>
+
+        <div class="bento-cell bento-third">
+          <div class="bento-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>Works offline</h3>
+          <p>No signal, no problem. Everything syncs when you reconnect.</p>
+        </div>
+
+        <div class="bento-cell bento-third">
+          <div class="bento-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+          </div>
+          <h3>Cross-device sync</h3>
+          <p>Sign in anywhere — your trips and shared docs follow you.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== FEATURES ========== -->
-  <section class="section features" id="features">
+  <!-- ========== EDITORIAL: HOW IT WORKS ========== -->
+  <section class="editorial" id="how">
     <div class="container">
-      <div class="section-label">Features</div>
-      <h2>Everything you need.<br>Nothing you don't.</h2>
-      <p class="section-sub">SplitMate handles the complexity so you can focus on making memories.</p>
 
-      <div class="features-grid">
-        <div class="feature-card feature-highlight">
-          <div class="feature-icon-wrap">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2l1.5 4.5L18 8l-4.5 1.5L12 14l-1.5-4.5L6 8l4.5-1.5z"/><path d="M19 14l.7 2.1L22 17l-2.3.9L19 20l-.7-2.1L16 17l2.3-.9z"/><path d="M5 16l.5 1.5L7 18l-1.5.5L5 20l-.5-1.5L3 18l1.5-.5z"/></svg>
-          </div>
-          <h3>AI Trip Assistant</h3>
-          <p>Snap any travel doc — receipt, boarding pass, hotel confirmation, passport. AI extracts the details and files it where it belongs. No typing, no folders to manage.</p>
-          <div class="feature-tags">
-            <span class="tag">Receipts</span>
-            <span class="tag">Tickets</span>
-            <span class="tag">Hotels</span>
-            <span class="tag">Passports</span>
-          </div>
+      <!-- Row 1: Capture -->
+      <div class="editorial-row">
+        <div class="editorial-text">
+          <div class="eyebrow">Capture</div>
+          <h2>Anything paper, scanned and sorted.</h2>
+          <p>Receipts go to expenses. Boarding passes go to your itinerary. Passports go to your private vault. SplitMate decides what's what — you just snap.</p>
+          <ul class="editorial-list">
+            <li>On-device OCR runs even offline</li>
+            <li>AI fills in fields so you don't have to type</li>
+            <li>You stay in control — review and edit before saving</li>
+          </ul>
         </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-wrap">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M2 9h20"/><path d="M10 15h4"/></svg>
+        <div class="editorial-visual">
+          <div class="visual-card">
+            <div class="folder-grid">
+              <div class="folder-tile">
+                <div class="folder-tile-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v14M4 19h15M4 19l1 2h13l1-2"/></svg>
+                </div>
+                <h4>Passports</h4>
+                <span>2 documents</span>
+              </div>
+              <div class="folder-tile">
+                <div class="folder-tile-icon purple">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+                </div>
+                <h4>Flights</h4>
+                <span>5 documents</span>
+              </div>
+              <div class="folder-tile">
+                <div class="folder-tile-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 22V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v14"/><path d="M2 22h20"/><path d="M6 11h12M6 15h12"/></svg>
+                </div>
+                <h4>Hotels</h4>
+                <span>3 documents</span>
+              </div>
+              <div class="folder-tile">
+                <div class="folder-tile-icon warm">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 4l-4 16M5 4l4 16M19 4l-4 16"/></svg>
+                </div>
+                <h4>Visas</h4>
+                <span>1 document</span>
+              </div>
+            </div>
           </div>
-          <h3>Smart Expense Splitting</h3>
-          <p>Split equally, by exact amount, or by percentage. We calculate the minimum payments needed to settle everyone up.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-wrap">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
-          </div>
-          <h3>Trip Itinerary</h3>
-          <p>Flights, hotels, activities — laid out day by day. Scan a boarding pass and we fill in the airline, gate, seat, and timezone automatically.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-wrap">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <h3>Travel Document Vault</h3>
-          <p>Passport, visa, insurance, vaccination records — organized into folders. Expiry alerts so you renew in time, not at the airport.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-wrap">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          </div>
-          <h3>Trip Budgets</h3>
-          <p>Set a whole-trip budget or break it down by category. Real-time progress bars and alerts when you're about to overspend.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-wrap">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          </div>
-          <h3>Multi-Currency</h3>
-          <p>Traveling abroad? Each trip can have its own currency with automatic exchange-rate conversion.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-wrap">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-          </div>
-          <h3>Smart Reminders</h3>
-          <p>Flight in 2 hours, hotel check-in tomorrow, passport expiring next month — notifications fire at the right local time, in the right timezone.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-wrap">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <h3>Works Offline</h3>
-          <p>No signal on a mountain? Add expenses, capture tickets, plan your day — everything syncs automatically when you're back online.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-wrap">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          </div>
-          <h3>Instant Settlements</h3>
-          <p>See who owes who at a glance. Record payments in one tap with a permanent audit trail.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-wrap">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-          </div>
-          <h3>Spending Analytics</h3>
-          <p>Visualize spending by category, member, or time. AI-powered insights surface trends you'd otherwise miss.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-wrap">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
-          </div>
-          <h3>Cross-Device Sync</h3>
-          <p>Sign in on any device — your trips, expenses, itinerary, and shared docs are all there. Your personal passport stays on the device you scanned it on.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-wrap">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3>Easy Invites</h3>
-          <p>Share a link or invite code. Friends join instantly — no sign-up friction.</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ========== HOW IT WORKS ========== -->
-  <section class="section how-it-works" id="how-it-works">
-    <div class="container">
-      <div class="section-label">How It Works</div>
-      <h2>Up and running in 60 seconds.</h2>
-      <p class="section-sub">Three steps. That's it. No accounts to create, no cards to link.</p>
-
-      <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-number">1</div>
-          <div class="step-visual">
-            <div class="step-phone-mini">
-              <div class="step-screen">
-                <div class="spm-create">
-                  <div class="spm-input-label">Trip Name</div>
-                  <div class="spm-input">Bali Summer 2026</div>
-                  <div class="spm-input-label">Currency</div>
-                  <div class="spm-input">USD ($)</div>
-                  <div class="spm-btn-create">Create Trip</div>
+      <!-- Row 2: Plan -->
+      <div class="editorial-row reverse">
+        <div class="editorial-text">
+          <div class="eyebrow">Plan</div>
+          <h2>Itinerary that knows your timezone.</h2>
+          <p>Day-by-day plan, with timezone-correct reminders. Get pinged 2 hours before your flight in Bali, not 2 hours after — even if your phone hasn't switched yet.</p>
+          <ul class="editorial-list">
+            <li>Flights, hotels, and activities in one timeline</li>
+            <li>Source documents linked to every event</li>
+            <li>Visible to every member of the trip</li>
+          </ul>
+        </div>
+        <div class="editorial-visual">
+          <div class="visual-card">
+            <div class="itinerary-vis">
+              <div class="itin-row">
+                <div class="itin-time">07:30</div>
+                <div class="itin-icon purple">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+                </div>
+                <div class="itin-info">
+                  <strong>MH 088 · KUL → DPS</strong>
+                  <span>Gate B12 · Seat 14C</span>
+                </div>
+              </div>
+              <div class="itin-row">
+                <div class="itin-time">14:00</div>
+                <div class="itin-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 22V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v14"/><path d="M2 22h20"/><path d="M6 11h12M6 15h12"/></svg>
+                </div>
+                <div class="itin-info">
+                  <strong>The Mulia Resort · Check-in</strong>
+                  <span>Confirmation MUL-7724</span>
+                </div>
+              </div>
+              <div class="itin-row">
+                <div class="itin-time">19:30</div>
+                <div class="itin-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12c0-2.21 1.79-4 4-4h10c2.21 0 4 1.79 4 4v0c0 2.21-1.79 4-4 4H7c-2.21 0-4-1.79-4-4z"/><path d="M7 8V5M17 8V5"/></svg>
+                </div>
+                <div class="itin-info">
+                  <strong>Sundara · Dinner</strong>
+                  <span>Reservation · 4 people</span>
                 </div>
               </div>
             </div>
           </div>
-          <h3>Create a Trip</h3>
-          <p>Name your trip, pick a currency, and you're the host. It takes 5 seconds.</p>
         </div>
+      </div>
 
-        <div class="step-connector">
-          <svg width="40" height="2" viewBox="0 0 40 2"><line x1="0" y1="1" x2="40" y2="1" stroke="var(--border)" stroke-width="2" stroke-dasharray="4 4"/></svg>
+      <!-- Row 3: Settle -->
+      <div class="editorial-row">
+        <div class="editorial-text">
+          <div class="eyebrow">Settle</div>
+          <h2>Money math, done.</h2>
+          <p>Add expenses as they happen. SplitMate keeps a running tally, then shows the smallest set of payments to make everyone whole.</p>
+          <ul class="editorial-list">
+            <li>Equal, exact, or percentage splits</li>
+            <li>Per-trip and per-category budgets with alerts</li>
+            <li>Permanent settlement history</li>
+          </ul>
         </div>
-
-        <div class="step-card">
-          <div class="step-number">2</div>
-          <div class="step-visual">
-            <div class="step-phone-mini">
-              <div class="step-screen">
-                <div class="spm-invite">
-                  <div class="spm-qr">
-                    <svg width="80" height="80" viewBox="0 0 80 80"><rect x="5" y="5" width="20" height="20" rx="2" fill="var(--dark)" opacity="0.8"/><rect x="30" y="5" width="8" height="8" rx="1" fill="var(--dark)" opacity="0.6"/><rect x="55" y="5" width="20" height="20" rx="2" fill="var(--dark)" opacity="0.8"/><rect x="5" y="30" width="8" height="8" rx="1" fill="var(--dark)" opacity="0.4"/><rect x="18" y="30" width="8" height="8" rx="1" fill="var(--dark)" opacity="0.6"/><rect x="35" y="30" width="12" height="12" rx="1" fill="var(--teal)" opacity="0.8"/><rect x="55" y="30" width="8" height="8" rx="1" fill="var(--dark)" opacity="0.5"/><rect x="5" y="55" width="20" height="20" rx="2" fill="var(--dark)" opacity="0.8"/><rect x="30" y="55" width="8" height="8" rx="1" fill="var(--dark)" opacity="0.5"/><rect x="55" y="55" width="8" height="8" rx="1" fill="var(--dark)" opacity="0.6"/><rect x="68" y="55" width="8" height="8" rx="1" fill="var(--dark)" opacity="0.4"/></svg>
-                  </div>
-                  <div class="spm-code">BALI2026</div>
-                  <div class="spm-share-btn">Share Invite</div>
-                </div>
+        <div class="editorial-visual">
+          <div class="split-demo">
+            <div class="split-demo-header">
+              <span>Dinner at Sakura</span>
+              <strong>$120.00</strong>
+            </div>
+            <div class="split-demo-type">Split equally</div>
+            <div class="split-demo-members">
+              <div class="split-member">
+                <div class="spm-avatar-sm" style="background:#1ABC9C">A</div>
+                <span>Alex</span>
+                <strong>$30.00</strong>
+              </div>
+              <div class="split-member">
+                <div class="spm-avatar-sm" style="background:#7F77DD">S</div>
+                <span>Sarah</span>
+                <strong>$30.00</strong>
+              </div>
+              <div class="split-member">
+                <div class="spm-avatar-sm" style="background:#E8A23B">M</div>
+                <span>Mike</span>
+                <strong>$30.00</strong>
+              </div>
+              <div class="split-member">
+                <div class="spm-avatar-sm" style="background:#C45434">J</div>
+                <span>Jess</span>
+                <strong>$30.00</strong>
               </div>
             </div>
-          </div>
-          <h3>Invite Your Group</h3>
-          <p>Share a link, QR code, or invite code. Friends join instantly — no sign-up friction.</p>
-        </div>
-
-        <div class="step-connector">
-          <svg width="40" height="2" viewBox="0 0 40 2"><line x1="0" y1="1" x2="40" y2="1" stroke="var(--border)" stroke-width="2" stroke-dasharray="4 4"/></svg>
-        </div>
-
-        <div class="step-card">
-          <div class="step-number">3</div>
-          <div class="step-visual">
-            <div class="step-phone-mini">
-              <div class="step-screen">
-                <div class="spm-balance">
-                  <div class="spm-balance-header">Balances</div>
-                  <div class="spm-balance-row">
-                    <div class="spm-avatar-sm" style="background:var(--teal)">A</div>
-                    <span>Alex</span>
-                    <span class="spm-owed">+$85.00</span>
-                  </div>
-                  <div class="spm-balance-row">
-                    <div class="spm-avatar-sm" style="background:var(--purple)">S</div>
-                    <span>Sarah</span>
-                    <span class="spm-owes">-$42.50</span>
-                  </div>
-                  <div class="spm-balance-row">
-                    <div class="spm-avatar-sm" style="background:var(--warning)">M</div>
-                    <span>Mike</span>
-                    <span class="spm-owes">-$42.50</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <h3>Split & Settle</h3>
-          <p>Add expenses as they happen. SplitMate shows who owes who and minimizes the number of payments.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== SHOWCASE (Split Types) ========== -->
-  <section class="section showcase">
-    <div class="container showcase-inner">
-      <div class="showcase-content">
-        <div class="section-label">Flexible Splitting</div>
-        <h2>Split it your way.</h2>
-        <p>Not every expense should be split evenly. SplitMate gives you three ways to divide costs — so everyone pays their fair share.</p>
-        <div class="split-types">
-          <div class="split-type">
-            <div class="split-icon equal">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 9h14M5 15h14"/></svg>
-            </div>
-            <div>
-              <strong>Equal Split</strong>
-              <span>Divide evenly among everyone</span>
-            </div>
-          </div>
-          <div class="split-type">
-            <div class="split-icon exact">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            </div>
-            <div>
-              <strong>Exact Amounts</strong>
-              <span>Set custom amounts per person</span>
-            </div>
-          </div>
-          <div class="split-type">
-            <div class="split-icon percent">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
-            </div>
-            <div>
-              <strong>Percentage</strong>
-              <span>Distribute by custom percentages</span>
+            <div class="split-demo-check">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Splits add up perfectly
             </div>
           </div>
         </div>
       </div>
-      <div class="showcase-visual">
-        <div class="split-demo">
-          <div class="split-demo-header">
-            <span>Dinner at Sakura</span>
-            <strong>$120.00</strong>
-          </div>
-          <div class="split-demo-type">Split equally</div>
-          <div class="split-demo-members">
-            <div class="split-member">
-              <div class="spm-avatar-sm" style="background:var(--teal)">A</div>
-              <span>Alex</span>
-              <strong>$30.00</strong>
-            </div>
-            <div class="split-member">
-              <div class="spm-avatar-sm" style="background:var(--purple)">S</div>
-              <span>Sarah</span>
-              <strong>$30.00</strong>
-            </div>
-            <div class="split-member">
-              <div class="spm-avatar-sm" style="background:var(--warning)">M</div>
-              <span>Mike</span>
-              <strong>$30.00</strong>
-            </div>
-            <div class="split-member">
-              <div class="spm-avatar-sm" style="background:var(--danger)">J</div>
-              <span>Jess</span>
-              <strong>$30.00</strong>
-            </div>
-          </div>
-          <div class="split-demo-check">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-            Splits add up perfectly
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ========== TRIP OS / PILLARS ========== -->
-  <section class="section pillars">
-    <div class="container">
-      <div class="section-label">More Than Splitting</div>
-      <h2>Your group trip,<br>all in one place.</h2>
-      <p class="section-sub">SplitMate brings the three things every group trip needs into a single app — so you stop juggling notes, screenshots, and group chats.</p>
-
-      <div class="pillars-grid">
-        <div class="pillar-card">
-          <div class="pillar-icon" style="background:rgba(26,188,156,0.12);color:var(--teal)">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M6 15h4"/></svg>
-          </div>
-          <h3>Expenses</h3>
-          <p>Capture, split, and settle. AI scans receipts, multi-currency works out of the box, balances minimize payments.</p>
-          <ul class="pillar-list">
-            <li>Equal / exact / percentage splits</li>
-            <li>Multi-currency with live conversion</li>
-            <li>Per-trip and per-category budgets</li>
-            <li>Settlement history &amp; audit trail</li>
-          </ul>
-        </div>
-
-        <div class="pillar-card">
-          <div class="pillar-icon" style="background:rgba(127,119,221,0.12);color:var(--purple)">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
-          </div>
-          <h3>Itinerary</h3>
-          <p>Day-by-day plan with flights, hotels, and activities. Scan a ticket — we fill in the gate, seat, and timezone.</p>
-          <ul class="pillar-list">
-            <li>Scan boarding passes &amp; bookings</li>
-            <li>Timezone-correct reminders</li>
-            <li>Linked source documents</li>
-            <li>Visible to every trip member</li>
-          </ul>
-        </div>
-
-        <div class="pillar-card">
-          <div class="pillar-icon" style="background:rgba(255,159,67,0.12);color:var(--warning)">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/><path d="M2 4v6h6"/></svg>
-          </div>
-          <h3>Documents</h3>
-          <p>Passport, visa, insurance, tickets — auto-filed into folders. Expiry alerts so you renew in time.</p>
-          <ul class="pillar-list">
-            <li>Folders by document type</li>
-            <li>Expiry warnings (90 / 30 / 7 days)</li>
-            <li>Personal vault stays on your device</li>
-            <li>Trip-attached docs shared with members</li>
-          </ul>
-        </div>
-      </div>
     </div>
   </section>
 
   <!-- ========== TESTIMONIALS ========== -->
-  <section class="section testimonials" id="testimonials">
+  <section class="testimonials" id="testimonials">
     <div class="container">
-      <div class="section-label">What People Say</div>
-      <h2>Loved by travelers worldwide.</h2>
+      <div class="testimonials-head">
+        <div class="eyebrow">Loved by travelers</div>
+        <h2>Group trips, without<br>the group chat chaos.</h2>
+      </div>
       <div class="testimonial-grid">
         <div class="testimonial-card">
           <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"Used SplitMate for our Japan trip with 6 friends. Zero arguments about money. The receipt scanner alone is worth the download."</p>
+          <p>"Used SplitMate on a 6-person Japan trip. Zero arguments about money. The receipt scanner alone is worth the install."</p>
           <div class="testimonial-author">
-            <div class="spm-avatar-sm" style="background:var(--teal)">R</div>
+            <div class="spm-avatar-sm" style="background:#1ABC9C">R</div>
             <div>
               <strong>Rahul K.</strong>
-              <span>Group trip to Japan</span>
+              <span>Group trip · Japan</span>
             </div>
           </div>
         </div>
         <div class="testimonial-card">
           <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"The offline mode saved us in the mountains. We added expenses all week with no service, and it synced everything when we got back."</p>
+          <p>"The offline mode saved us in the mountains. Logged a week of expenses with no signal — synced everything in seconds when we got back."</p>
           <div class="testimonial-author">
-            <div class="spm-avatar-sm" style="background:var(--purple)">E</div>
+            <div class="spm-avatar-sm" style="background:#7F77DD">E</div>
             <div>
               <strong>Emma L.</strong>
-              <span>Hiking trip, Colorado</span>
+              <span>Hiking trip · Colorado</span>
             </div>
           </div>
         </div>
         <div class="testimonial-card">
           <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>"Finally an expense app that doesn't make you create accounts and link cards. Share a link, everyone's in. So simple."</p>
+          <p>"Scanned my boarding pass and it added the flight to my itinerary with the right gate, timezone, everything. Magical."</p>
           <div class="testimonial-author">
-            <div class="spm-avatar-sm" style="background:var(--warning)">D</div>
+            <div class="spm-avatar-sm" style="background:#E8A23B">D</div>
             <div>
               <strong>David M.</strong>
-              <span>Roommates &amp; weekend trips</span>
+              <span>Solo + group trips</span>
             </div>
           </div>
         </div>
@@ -591,66 +450,68 @@
   </section>
 
   <!-- ========== FAQ ========== -->
-  <section class="section faq" id="faq">
+  <section class="faq" id="faq">
     <div class="container faq-inner">
-      <div class="section-label">FAQ</div>
-      <h2>Common questions.</h2>
+      <div class="faq-head">
+        <div class="eyebrow">FAQ</div>
+        <h2>Common questions.</h2>
+      </div>
       <div class="faq-list">
         <details class="faq-item">
           <summary>Is SplitMate free?</summary>
-          <p>Yes, completely free. No premium tiers, no ads, no hidden costs. All features are available to everyone.</p>
+          <p>Yes — completely free. No premium tiers, no ads, no hidden costs. Every feature is available to everyone.</p>
         </details>
         <details class="faq-item">
           <summary>Does everyone need to install the app?</summary>
-          <p>Only the person adding expenses needs the app. Others can join via a link and view balances. But the full experience comes with the app installed.</p>
+          <p>Only the person adding expenses needs the app. Others can join via a link to view balances. The full experience comes with the app installed.</p>
         </details>
         <details class="faq-item">
           <summary>Does it work without internet?</summary>
-          <p>Absolutely. SplitMate is built offline-first. Add expenses, record payments, and view balances without any internet connection. Everything syncs automatically when you reconnect.</p>
+          <p>Absolutely. SplitMate is built offline-first. Add expenses, scan tickets, plan your day — everything syncs automatically when you reconnect.</p>
         </details>
         <details class="faq-item">
           <summary>How does the AI scanner work?</summary>
-          <p>Snap a photo or upload a PDF of any travel document — receipts, boarding passes, hotel bookings, passports, visas. Our AI reads the text, recognizes what kind of doc it is, and fills in the right fields. For tickets and bookings, it also offers to add the event to your itinerary in one tap.</p>
+          <p>Snap a photo or upload a PDF of any travel document — receipts, boarding passes, hotel bookings, passports, visas. Our AI reads the text, recognises the doc type, and fills in the right fields. For tickets and bookings, it offers to add the event to your itinerary in one tap.</p>
         </details>
         <details class="faq-item">
           <summary>Can SplitMate replace my itinerary planner?</summary>
-          <p>Yes. Add flights, hotels, and activities manually or scan tickets and bookings to fill them in automatically. Reminders fire at the correct local time at your destination — even if your phone hasn't switched timezones yet.</p>
+          <p>Yes. Add flights, hotels, and activities manually or scan tickets to fill them in automatically. Reminders fire at the correct local time at your destination — even if your phone hasn't switched timezones yet.</p>
         </details>
         <details class="faq-item">
           <summary>Are my travel documents private?</summary>
-          <p>Your personal passport stays on the device you scanned it on — it never leaves unless you explicitly attach it to a trip to share with members. Other docs (flights, hotels) sync across your own devices and are visible to members of trips you've attached them to.</p>
+          <p>Your personal passport stays on the device you scanned it on — it never leaves unless you explicitly attach it to a trip. Other docs (flights, hotels) sync across your own devices and are visible to members of trips you've attached them to.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What happens if I sign in on a new device?</summary>
+          <p>Everything syncs across devices: trips, expenses, itinerary events, and shared documents. The only exception is personal-vault passports — those stay on the original device.</p>
         </details>
         <details class="faq-item">
           <summary>Can I use different currencies?</summary>
           <p>Yes. Each trip can have its own currency with automatic exchange-rate conversion. Perfect for international travel and multi-currency expenses.</p>
         </details>
         <details class="faq-item">
-          <summary>What happens if I sign in on a new device?</summary>
-          <p>Everything syncs across devices: trips, expenses, itinerary events, and shared documents. The only exception is personal-vault passports — those stay on the original device for privacy.</p>
-        </details>
-        <details class="faq-item">
           <summary>Is my data safe?</summary>
-          <p>Your data is stored securely with row-level access controls — only you and members of trips you're part of can see your trip data. We never sell your data to third parties.</p>
+          <p>Your data is stored with row-level access controls — only you and members of trips you're part of can see your trip data. We never sell your data to third parties.</p>
         </details>
       </div>
     </div>
   </section>
 
   <!-- ========== CTA / DOWNLOAD ========== -->
-  <section class="section cta" id="download">
-    <div class="container cta-inner">
-      <h2>Ready to split smarter?</h2>
-      <p>Download SplitMate free and never argue about money again.</p>
+  <section class="cta" id="download">
+    <div class="container">
+      <h2>Your next trip,<br>without the awkward parts.</h2>
+      <p>Free for iOS and Android. Get the whole group on the same page in under a minute.</p>
       <div class="cta-buttons">
         <a href="#" class="store-badge" aria-label="Download on the App Store">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
           <div>
             <small>Download on the</small>
             <strong>App Store</strong>
           </div>
         </a>
         <a href="#" class="store-badge" aria-label="Get it on Google Play">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.49c-.41-.2-.68-.6-.68-1.07V1.58c0-.47.27-.87.68-1.07L13.54 12 3.18 23.49zM16.83 15.29l-2.58-2.58L16.83 10.13l3.33 1.93c.59.34.59.94 0 1.28l-3.33 1.95zM14.25 12.71l-10.8 10.8 12.55-7.26-1.75-3.54zM3.45.49l10.8 10.8 1.75-3.54L3.45.49z"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.49c-.41-.2-.68-.6-.68-1.07V1.58c0-.47.27-.87.68-1.07L13.54 12 3.18 23.49zM16.83 15.29l-2.58-2.58L16.83 10.13l3.33 1.93c.59.34.59.94 0 1.28l-3.33 1.95zM14.25 12.71l-10.8 10.8 12.55-7.26-1.75-3.54zM3.45.49l10.8 10.8 1.75-3.54L3.45.49z"/></svg>
           <div>
             <small>Get it on</small>
             <strong>Google Play</strong>
@@ -670,19 +531,19 @@
           </div>
           <span class="logo-text">SplitMate</span>
         </a>
-        <p>Split expenses with friends, not friendships.</p>
+        <p>The trip companion that keeps the group together.</p>
       </div>
       <div class="footer-links">
         <div class="footer-col">
           <strong>Product</strong>
           <a href="#features">Features</a>
-          <a href="#how-it-works">How It Works</a>
+          <a href="#how">How it works</a>
           <a href="#download">Download</a>
         </div>
         <div class="footer-col">
           <strong>Legal</strong>
-          <a href="/privacy.html">Privacy Policy</a>
-          <a href="/terms.html">Terms of Service</a>
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
         </div>
         <div class="footer-col">
           <strong>Connect</strong>

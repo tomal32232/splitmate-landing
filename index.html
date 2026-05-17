@@ -420,8 +420,12 @@
   @keyframes cf2{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
   @keyframes cf3{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 
-  /* ===================== JOURNEY (pinned horizontal slide) ===================== */
-  .journey{position:relative;height:calc(100svh * 4.8)}
+  /* ===================== JOURNEY (snap-to-panel filmstrip) ===================== */
+  /* Section is exactly one viewport tall. Wheel / touch / keyboard gestures are
+     intercepted so each gesture advances one panel — no half-slide state. */
+  .journey{position:relative;height:100svh}
+  .j-track{transition:transform .7s cubic-bezier(.65,0,.35,1)}
+  .j-line i{transition:transform .7s cubic-bezier(.65,0,.35,1)}
   .journey-sticky{position:sticky;top:0;height:100svh;overflow:hidden;
     display:flex;flex-direction:column;justify-content:center}
   .journey-inner{width:100%;max-width:80rem;margin:0 auto;padding:0 22px}
@@ -557,6 +561,8 @@
 
   /* ===================== FINAL CTA ===================== */
   .final{text-align:center;position:relative;overflow:hidden}
+  .final.pad{padding-bottom:56px}
+  @media(min-width:768px){.final.pad{padding-bottom:72px}}
   .cta-bg{position:absolute;inset:0;z-index:0}
   .cta-bg img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
   .cta-bg::after{content:"";position:absolute;inset:0;
@@ -592,7 +598,7 @@
   .ea-hint{font-size:12.5px;color:rgba(255,255,255,.4);text-align:center;font-weight:500}
 
   /* ===================== FOOTER ===================== */
-  footer{background:var(--forest-2);padding:74px 0 34px;position:relative;z-index:5}
+  footer{background:var(--forest-2);padding:44px 0 34px;position:relative;z-index:5}
   .foot-dl{scroll-margin-top:84px;display:flex;flex-direction:column;gap:22px;
     padding-bottom:46px;margin-bottom:46px;border-bottom:1px solid var(--line-l)}
   @media(min-width:760px){.foot-dl{flex-direction:row;align-items:center;
@@ -1250,7 +1256,8 @@
     });
   });
 
-  // ---- pinned journey: one filmstrip, vertical scroll drives horizontal slide ----
+  // ---- pinned journey: snap-to-panel filmstrip
+  // (one wheel/swipe gesture = one panel; never halfway) ----
   (function(){
     const sec=document.getElementById('journey');
     if(!sec)return;
@@ -1259,32 +1266,100 @@
     const line=document.getElementById('jLine');
     const labs=[...sec.querySelectorAll('.j-lab')];
     const N=labs.length;
-    let target=0,cur=0,running=false,vw=0,total=1;
+    const ANIM_MS=700;
 
-    function measure(){
-      vw=vp.clientWidth;
-      total=Math.max(1,sec.offsetHeight-innerHeight);
-      target=Math.min(Math.max(-sec.getBoundingClientRect().top/total,0),1);
+    let index=0,vw=0,cooldownUntil=0,wasActive=false,lastY=scrollY;
+
+    function measure(){vw=vp.clientWidth;}
+    function paint(animate){
+      const dur=(animate&&!reduce)?ANIM_MS:0;
+      track.style.transition='transform '+dur+'ms cubic-bezier(.65,0,.35,1)';
+      line.style.transition='transform '+dur+'ms cubic-bezier(.65,0,.35,1)';
+      track.style.transform='translate3d('+(-index*vw)+'px,0,0)';
+      line.style.transform='scaleX('+(N>1?index/(N-1):0)+')';
+      labs.forEach((l,k)=>l.classList.toggle('on',k===index));
     }
-    function paint(p){
-      track.style.transform='translate3d('+(-p*(N-1)*vw)+'px,0,0)';
-      line.style.transform='scaleX('+p+')';
-      const a=Math.round(p*(N-1));
-      labs.forEach((l,k)=>l.classList.toggle('on',k===a));
+    function setIndex(i,animate){
+      i=Math.max(0,Math.min(N-1,i));
+      if(i===index){paint(false);return false;}
+      index=i;paint(animate);
+      cooldownUntil=Date.now()+(animate?ANIM_MS:0);
+      return true;
     }
-    function loop(){
-      cur+=(target-cur)*(reduce?1:0.16);    // gentle glide toward scroll position
-      if(Math.abs(target-cur)<0.0003)cur=target;
-      paint(cur);
-      if(cur!==target){requestAnimationFrame(loop);}else{running=false;}
+    // Section is "active" when it fully covers the viewport.
+    function isActive(){
+      const r=sec.getBoundingClientRect();
+      return r.top<=1 && r.bottom>=innerHeight-1;
     }
-    function kick(){measure();if(!running){running=true;requestAnimationFrame(loop);}}
-    addEventListener('scroll',kick,{passive:true});
-    addEventListener('resize',()=>{measure();cur=target;paint(cur);});
-    measure();cur=target;paint(cur);
+    function tryAdvance(dir,e){
+      if(!isActive())return;
+      const now=Date.now();
+      if(now<cooldownUntil){e&&e.preventDefault&&e.preventDefault();return;}
+      const next=index+dir;
+      if(next<0||next>=N)return;     // at edge → release: page can scroll out
+      e&&e.preventDefault&&e.preventDefault();
+      setIndex(next,true);
+    }
+
+    // ---- wheel / trackpad ----
+    addEventListener('wheel',e=>{
+      if(!isActive())return;
+      if(Date.now()<cooldownUntil){e.preventDefault();return;}
+      if(Math.abs(e.deltaY)<6)return;
+      tryAdvance(e.deltaY>0?1:-1,e);
+    },{passive:false});
+
+    // ---- touch (mobile swipe) ----
+    let touchY=null;
+    addEventListener('touchstart',e=>{
+      if(!isActive()){touchY=null;return;}
+      touchY=e.touches[0].clientY;
+    },{passive:true});
+    addEventListener('touchmove',e=>{
+      if(!isActive()||touchY===null)return;
+      if(Date.now()<cooldownUntil){e.preventDefault();return;}
+      const dy=touchY-e.touches[0].clientY;
+      if(Math.abs(dy)<35)return;
+      tryAdvance(dy>0?1:-1,e);
+      touchY=null;
+    },{passive:false});
+    addEventListener('touchend',()=>{touchY=null;},{passive:true});
+
+    // ---- keyboard ----
+    addEventListener('keydown',e=>{
+      if(!isActive())return;
+      const k=e.key;
+      if(k==='ArrowDown'||k==='ArrowRight'||k==='PageDown'||k===' ')tryAdvance(1,e);
+      else if(k==='ArrowUp'||k==='ArrowLeft'||k==='PageUp')tryAdvance(-1,e);
+    });
+
+    // ---- reset to first / last panel on (re-)entry depending on direction ----
+    addEventListener('scroll',()=>{
+      const a=isActive();
+      if(a && !wasActive){
+        const enteredFromTop=scrollY>=lastY;
+        setIndex(enteredFromTop?0:N-1,false);
+      }
+      wasActive=a;lastY=scrollY;
+    },{passive:true});
+
+    // ---- resize ----
+    addEventListener('resize',()=>{measure();paint(false);});
+
+    // ---- label clicks ----
     labs.forEach((l,i)=>l.addEventListener('click',()=>{
-      scrollTo({top:sec.offsetTop+(i/(N-1))*total,behavior:'smooth'});
+      if(!isActive()){
+        sec.scrollIntoView({behavior:'smooth',block:'start'});
+        setTimeout(()=>setIndex(i,true),520);
+      }else{
+        setIndex(i,true);
+      }
     }));
+
+    measure();paint(false);
+    // Set initial state in case section is already in view on load.
+    wasActive=isActive();
+    if(wasActive)setIndex(0,false);
   })();
 
   // ---- torn paper edges ----

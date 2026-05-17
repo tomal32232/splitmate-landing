@@ -1,7 +1,7 @@
 
 
 # Project Memory — splitmate-landing
-> 86 notes | Score threshold: >40
+> 146 notes | Score threshold: >40
 
 ## Safety — Never Run Destructive Commands
 
@@ -20,39 +20,29 @@
 
 ## 📝 NOTE: 1 uncommitted file(s) in working tree.\n\n## Important Warnings
 
-- **gotcha in shared-context.json** — -     }
-+     },
--   ]
-+     {
-- }
-+       "id": "71e5aed28e203c69",
-+
-- **gotcha in shared-context.json** — -     }
-+     },
--   ]
-+     {
-- }
-+       "id": "0206e7d917954838",
-+
-- **⚠️ GOTCHA: problem-fix in agent-rules.md** — - - Fixed null crash in Contact
-+ - problem-fix in agent-rules.md
-- - 
-- **⚠️ GOTCHA: problem-fix in agent-rules.md** — - - Fixed null crash in DOCTYPE — hardens HTTP security headers
-+ - pr
-- **gotcha in agent-rules.md** — File updated (external): .brainsync/agent-rules.md
-
-Content summary (3
+- **⚠️ GOTCHA: Added JWT tokens authentication — evolves the database schema to support new ...** — - > 138 notes | Score threshold: >40
++ > 141 notes | Score threshold: 
+- **⚠️ GOTCHA: Added JWT tokens authentication — evolves the database schema to support new ...** — - > 135 notes | Score threshold: >40
++ > 138 notes | Score threshold: 
+- **⚠️ GOTCHA: Added JWT tokens authentication — evolves the database schema to support new ...** — - > 132 notes | Score threshold: >40
++ > 135 notes | Score threshold: 
+- **⚠️ GOTCHA: Replaced API key auth with JWT tokens — evolves the database schema to suppor...** — - > 128 notes | Score threshold: >40
++ > 132 notes | Score threshold: 
+- **⚠️ GOTCHA: Added API key auth authentication — evolves the database schema to support ne...** — - > 125 notes | Score threshold: >40
++ > 128 notes | Score threshold: 
+- **⚠️ GOTCHA: Added API key auth authentication — evolves the database schema to support ne...** — - > 123 notes | Score threshold: >40
++ > 125 notes | Score threshold: 
 
 ## Project Standards
 
-- Strengthened types Optimized — optimizes data fetching with relational query ...
-- Strengthened types Optimized — optimizes data fetching with relational query ...
-- Strengthened types Architectural
-- Strengthened types Fixed
-- Strengthened types Patched
-- Strengthened types Recent
-- Strengthened types Project
-- convention in .gitignore
+- Added JWT tokens authentication — confirmed 3x
+- what-changed in shared-context.json — confirmed 3x
+- what-changed in shared-context.json — confirmed 3x
+- Added JWT tokens authentication — confirmed 3x
+- convention in agent-rules.md
+- what-changed in brainsync_auto.md — confirmed 3x
+- Added API key auth authentication — evolves the database schema to support ne... — confirmed 3x
+- Added API key auth authentication — evolves the database schema to support ne... — confirmed 3x
 
 ## Known Fixes
 
@@ -64,8 +54,11 @@ Content summary (3
 - Optimized Added — optimizes data fetching with relational query instead of N+...
 - Optimized Fixed — optimizes data fetching with relational query instead of N+...
 
-## Verified Best Practices
+## Learned Patterns
 
+- Always: Added API key auth authentication — evolves the database schema to support ne... — confirmed 3x (seen 2x)
+- Avoid: ⚠️ GOTCHA: Added JWT tokens authentication — evolves the database schema to support new ... (seen 2x)
+- Avoid: ⚠️ GOTCHA: Added API key auth authentication — evolves the database schema to support ne... (seen 2x)
 - Agent generates new migration for every change (squash related changes)
 - Agent installs packages without checking if already installed
 

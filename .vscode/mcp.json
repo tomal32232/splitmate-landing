@@ -1,0 +1,16 @@
+{
+  "servers": {
+    "brainsync": {
+      "command": "node",
+      "args": [
+        "/Users/personal/.vscode/extensions/dawoodahmad.brainsync-3.0.11/dist/mcp-server.js",
+        "--db",
+        "/Users/personal/.brainsync/splitmate-landing/state.dat"
+      ],
+      "type": "stdio",
+      "env": {
+        "BRAINSYNC_ENV_FILE": "/Users/personal/.brainsync/splitmate-landing/mcp-secret-env.json"
+      }
+    }
+  }
+}
